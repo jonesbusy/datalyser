@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="ClosedHashTable.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="1203" topLine="56" />
+	</File>
+	<File name="ClosedHashTable.h" open="0" top="0" tabpos="12">
+		<Cursor position="331" topLine="0" />
+	</File>
+	<File name="ClosedRow.cpp" open="0" top="0" tabpos="8">
+		<Cursor position="533" topLine="0" />
+	</File>
+	<File name="ClosedRow.h" open="0" top="0" tabpos="7">
+		<Cursor position="4509" topLine="0" />
+	</File>
+	<File name="DichotomousTable.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="615" topLine="0" />
+	</File>
+	<File name="DichotomousTable.h" open="0" top="0" tabpos="8">
+		<Cursor position="323" topLine="0" />
+	</File>
+	<File name="HashTable.cpp" open="0" top="0" tabpos="11">
+		<Cursor position="160" topLine="0" />
+	</File>
+	<File name="HashTable.h" open="0" top="0" tabpos="10">
+		<Cursor position="486" topLine="0" />
+	</File>
+	<File name="IHash.h" open="0" top="0" tabpos="0">
+		<Cursor position="214" topLine="0" />
+	</File>
+	<File name="IRow.h" open="0" top="0" tabpos="3">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="OpenHashTable.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="1157" topLine="27" />
+	</File>
+	<File name="OpenHashTable.h" open="0" top="0" tabpos="18">
+		<Cursor position="280" topLine="0" />
+	</File>
+	<File name="OpenRow.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="339" topLine="0" />
+	</File>
+	<File name="OpenRow.h" open="0" top="0" tabpos="0">
+		<Cursor position="97" topLine="31" />
+	</File>
+	<File name="Row.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="118" topLine="0" />
+	</File>
+	<File name="Row.h" open="0" top="0" tabpos="4">
+		<Cursor position="1646" topLine="0" />
+	</File>
+	<File name="SequentialTable.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="595" topLine="0" />
+	</File>
+	<File name="SequentialTable.h" open="0" top="0" tabpos="6">
+		<Cursor position="636" topLine="54" />
+	</File>
+	<File name="Table.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="1627" topLine="0" />
+	</File>
+	<File name="Table.h" open="1" top="1" tabpos="1">
+		<Cursor position="6051" topLine="0" />
+	</File>
+	<File name="TableError.h" open="0" top="0" tabpos="0">
+		<Cursor position="136" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

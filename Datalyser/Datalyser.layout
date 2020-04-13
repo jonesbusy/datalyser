@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="ClosedHashRow.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="226" topLine="0" />
+	</File>
+	<File name="ClosedHashRow.h" open="0" top="0" tabpos="3">
+		<Cursor position="344" topLine="27" />
+	</File>
+	<File name="ClosedHashTable.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="1616" topLine="66" />
+	</File>
+	<File name="ClosedHashTable.h" open="0" top="0" tabpos="1">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="DichotomousTable.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="2769" topLine="107" />
+	</File>
+	<File name="DichotomousTable.h" open="0" top="0" tabpos="5">
+		<Cursor position="2750" topLine="81" />
+	</File>
+	<File name="HashTable.cpp" open="0" top="0" tabpos="8">
+		<Cursor position="340" topLine="0" />
+	</File>
+	<File name="HashTable.h" open="0" top="0" tabpos="7">
+		<Cursor position="357" topLine="0" />
+	</File>
+	<File name="List.cpp" open="0" top="0" tabpos="14">
+		<Cursor position="333" topLine="27" />
+	</File>
+	<File name="List.h" open="0" top="0" tabpos="13">
+		<Cursor position="1040" topLine="88" />
+	</File>
+	<File name="OpenHashTable.cpp" open="0" top="0" tabpos="10">
+		<Cursor position="816" topLine="11" />
+	</File>
+	<File name="OpenHashTable.h" open="0" top="0" tabpos="9">
+		<Cursor position="592" topLine="54" />
+	</File>
+	<File name="Row.cpp" open="0" top="0" tabpos="12">
+		<Cursor position="782" topLine="25" />
+	</File>
+	<File name="Row.h" open="0" top="0" tabpos="11">
+		<Cursor position="5183" topLine="99" />
+	</File>
+	<File name="SequentialTable.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="284" topLine="2" />
+	</File>
+	<File name="SequentialTable.h" open="0" top="0" tabpos="3">
+		<Cursor position="622" topLine="63" />
+	</File>
+	<File name="Table.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="2067" topLine="65" />
+	</File>
+	<File name="Table.h" open="0" top="0" tabpos="1">
+		<Cursor position="5392" topLine="159" />
+	</File>
+</CodeBlocks_layout_file>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="ClosedHashTable.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="2152" topLine="54" />
+	</File>
+	<File name="ClosedHashTable.h" open="0" top="0" tabpos="3">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="ClosedRow.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="320" topLine="0" />
+	</File>
+	<File name="ClosedRow.h" open="0" top="0" tabpos="5">
+		<Cursor position="261" topLine="0" />
+	</File>
+	<File name="DichotomousTable.h" open="0" top="0" tabpos="0">
+		<Cursor position="68" topLine="0" />
+	</File>
+	<File name="HashTable.h" open="0" top="0" tabpos="0">
+		<Cursor position="99" topLine="0" />
+	</File>
+	<File name="IHash.h" open="0" top="0" tabpos="0">
+		<Cursor position="885" topLine="0" />
+	</File>
+	<File name="List.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="2484" topLine="0" />
+	</File>
+	<File name="List.h" open="0" top="0" tabpos="0">
+		<Cursor position="5066" topLine="67" />
+	</File>
+	<File name="OpenHashTable.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1899" topLine="0" />
+	</File>
+	<File name="OpenHashTable.h" open="0" top="0" tabpos="0">
+		<Cursor position="364" topLine="55" />
+	</File>
+	<File name="SequentialTable.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1415" topLine="27" />
+	</File>
+	<File name="SequentialTable.h" open="0" top="0" tabpos="0">
+		<Cursor position="0" topLine="63" />
+	</File>
+	<File name="Table.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="0" topLine="48" />
+	</File>
+	<File name="Table.h" open="1" top="1" tabpos="1">
+		<Cursor position="4402" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>
