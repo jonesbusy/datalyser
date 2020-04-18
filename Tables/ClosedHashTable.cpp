@@ -1,6 +1,8 @@
 #ifndef CLOSED_HASH_TABLE_TCC_INCLUDED
 #define CLOSED_HASH_TABLE_TCC_INCLUDED
 
+#include "ClosedHashTable.h"
+
 template<typename Key>
 ClosedHashTable<Key>::ClosedHashTable(long size, IHash<Key>* iHash) : HashTable<Key>(size, iHash), count(0)
 {

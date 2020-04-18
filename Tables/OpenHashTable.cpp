@@ -1,6 +1,8 @@
 #ifndef OPEN_HASH_TABLE_TCC_INCLUDED
 #define OPEN_HASH_TABLE_TCC_INCLUDED
 
+#include "OpenHashTable.h"
+
 template<typename Key>
 OpenHashTable<Key>::OpenHashTable(long size, IHash<Key>* iHash) : HashTable<Key>(size, iHash)
 {

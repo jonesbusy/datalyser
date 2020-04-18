@@ -1,6 +1,8 @@
 #ifndef DICHOTOMOUS_TABLE_TCC_INCLUDED
 #define DICHOTOMOUS_TABLE_TCC_INCLUDED
 
+#include "DichotomousTable.h"
+
 template <typename Key>
 DichotomousTable<Key>::DichotomousTable(long size) : Table<Key>::Table(size), offset(0), shorted(true)
 {

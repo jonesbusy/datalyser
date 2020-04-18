@@ -1,6 +1,8 @@
 #ifndef SEQUENTIAL_TABLE_TCC_INCLUDED
 #define SEQUENTIAL_TABLE_TCC_INCLUDED
 
+#include "SequentialTable.h"
+
 template <typename Key>
 SequentialTable<Key>::SequentialTable(long size) : Table<Key>::Table(size), offset(0)
 {

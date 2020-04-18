@@ -1,6 +1,8 @@
 #ifndef TABLE_TCC_INCLUDED
 #define TABLE_TCC_INCLUDED
 
+#include "Table.h"
+
 template <typename Key>
 Table<Key>::Table(long size) : size(size), complexity(NULL)
 {

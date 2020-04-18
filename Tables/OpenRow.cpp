@@ -1,6 +1,8 @@
 #ifndef OPEN_ROW_TCC_INCLUDED
 #define OPEN_ROW_TCC_INCLUDED
 
+#include "OpenRow.h"
+
 template <typename Key>
 OpenRow<Key>::OpenRow() : std::vector<Row<Key>*>()
 {
