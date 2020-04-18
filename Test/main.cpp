@@ -159,10 +159,7 @@ int main()
     }
     catch (TableError error)
     {
-        if (error == OVERFLOW)
-            printf("OVERFLOW\n");
-        else
-            printf("Error : %d\n", error);
+		printf("Error : %d\n", error);
     }
 
     for (int i = 0; i <= 50; i++)
@@ -208,10 +205,7 @@ int main()
     }
     catch (TableError error)
     {
-        if (error == OVERFLOW)
-            printf("OVERFLOW\n");
-        else
-            printf("Error : %d\n", error);
+		printf("Error : %d\n", error);
     }
 
     for (int i = 0; i <= 50; i++)
@@ -259,10 +253,7 @@ int main()
     }
     catch (TableError error)
     {
-        if (error == OVERFLOW)
-            printf("OVERFLOW\n");
-        else
-            printf("Error : %d\n", error);
+		printf("Error : %d\n", error);
     }
 
     for (int i = 0; i <= 50; i++)
@@ -310,10 +301,7 @@ int main()
     }
     catch (TableError error)
     {
-        if (error == OVERFLOW)
-            printf("OVERFLOW\n");
-        else
-            printf("Error : %d\n", error);
+		printf("Error : %d\n", error);
     }
 
     for (int i = 0; i <= 50; i++)

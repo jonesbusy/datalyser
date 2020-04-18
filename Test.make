@@ -23,15 +23,15 @@ TARGETDIR = bin/Debug
 TARGET = $(TARGETDIR)/Test
 OBJDIR = obj/Test/Debug
 DEFINES +=
-INCLUDES += -ITest -ITables
+INCLUDES += -ITest -ITables -IDatalyser
 FORCE_INCLUDE +=
 ALL_CPPFLAGS += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
 ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64
 ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-LIBS +=
-LDDEPS +=
-ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64 -s
+LIBS += bin/Debug/libTables.so bin/Debug/libDatalyser.so
+LDDEPS += bin/Debug/libTables.so bin/Debug/libDatalyser.so
+ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -Wl,-rpath,'$$ORIGIN' -m64 -s
 LINKCMD = $(CXX) -o "$@" $(OBJECTS) $(RESOURCES) $(ALL_LDFLAGS) $(LIBS)
 define PREBUILDCMDS
 endef

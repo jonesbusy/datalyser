@@ -11,12 +11,13 @@ endif
 ifeq ($(config),debug)
   Tables_config = debug
   Datalyser_config = debug
+  Test_config = debug
 
 else
   $(error "invalid configuration $(config)")
 endif
 
-PROJECTS := Tables Datalyser
+PROJECTS := Tables Datalyser Test
 
 .PHONY: all clean help $(PROJECTS) 
 
@@ -34,9 +35,16 @@ ifneq (,$(Datalyser_config))
 	@${MAKE} --no-print-directory -C . -f Datalyser.make config=$(Datalyser_config)
 endif
 
+Test: Tables Datalyser
+ifneq (,$(Test_config))
+	@echo "==== Building Test ($(Test_config)) ===="
+	@${MAKE} --no-print-directory -C . -f Test.make config=$(Test_config)
+endif
+
 clean:
 	@${MAKE} --no-print-directory -C . -f Tables.make clean
 	@${MAKE} --no-print-directory -C . -f Datalyser.make clean
+	@${MAKE} --no-print-directory -C . -f Test.make clean
 
 help:
 	@echo "Usage: make [config=name] [target]"
@@ -49,5 +57,6 @@ help:
 	@echo "   clean"
 	@echo "   Tables"
 	@echo "   Datalyser"
+	@echo "   Test"
 	@echo ""
 	@echo "For more information, see https://github.com/premake/premake-core/wiki"

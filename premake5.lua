@@ -16,3 +16,9 @@ project "Datalyser"
     kind "SharedLib"
     files "Datalyser/**.cpp"
     includedirs "Datalyser"
+
+project "Test"
+    kind "ConsoleApp"
+    files "Test/**.cpp"
+    includedirs {"Test", "Tables", "Datalyser"}
+	links {"Tables", "Datalyser"}
