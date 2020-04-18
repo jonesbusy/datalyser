@@ -1,6 +1,8 @@
 #ifndef SEQUENTIAL_TABLE_TCC_INCLUDED
 #define SEQUENTIAL_TABLE_TCC_INCLUDED
 
+#include "SequentialTable.h"
+
 template <typename Key>
 SequentialTable<Key>::SequentialTable(long size) : Table<Key>::Table(size), offset(0)
 {
@@ -9,20 +11,20 @@ SequentialTable<Key>::SequentialTable(long size) : Table<Key>::Table(size), offs
 template <typename Key>
 void SequentialTable<Key>::insert(const Row<Key>& row)
 {
-    // Dépassement de la taille ?
+    // Dï¿½passement de la taille ?
     if (this->offset >= this->getSize())
 
         throw OVERFLOW;
 
-    // Ligne déjà existante ?
+    // Ligne dï¿½jï¿½ existante ?
     if (this->getRowPosition(row.getKey()) != -1)
 
         throw DUPLICATE_KEY;
 
-    // Allocation dynamique de la ligne et incrémentation du curseur
+    // Allocation dynamique de la ligne et incrï¿½mentation du curseur
     row.clone(this->getRow(this->offset++));
 
-    // Ajout de la ligne et incrémentation du curseur
+    // Ajout de la ligne et incrï¿½mentation du curseur
     //this->setRow(this->offset++, row);
 }
 
@@ -32,7 +34,7 @@ Row<Key>* SequentialTable<Key>::search(const Key& key)
     // Positionnement de la ligne
     long index = this->getRowPosition(key);
 
-    // Pas trouvée...
+    // Pas trouvï¿½e...
     if (index == -1)
 
         return NULL;
@@ -47,22 +49,22 @@ void SequentialTable<Key>::reset()
     // Appel du parent
     Table<Key>::reset();
 
-    // Réinitialisation du curseur
+    // Rï¿½initialisation du curseur
     this->offset = 0;
 }
 
 template <typename Key>
 long SequentialTable<Key>::getRowPosition(const Key& key)
 {
-    // Recherche séquentielle jusqu'au curseur
+    // Recherche sï¿½quentielle jusqu'au curseur
     for (register long i = 0; i < this->offset; i++)
 
-        // Ligne trouvée ?
+        // Ligne trouvï¿½e ?
         if (*this->getRow(i) == key)
 
             return i;
 
-    // Pas trouvée...
+    // Pas trouvï¿½e...
     return -1;
 }
 

@@ -1,6 +1,8 @@
 #ifndef BENCHMARK_TCC_INCLUDED
 #define BENCHMARK_TCC_INCLUDED
 
+#include "Benchmark.h"
+
 template <typename Key>
 Benchmark<Key>::Benchmark(IProgress* iProgress) : iProgress(iProgress)
 {

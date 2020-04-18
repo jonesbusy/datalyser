@@ -1,10 +1,12 @@
 #ifndef OPEN_HASH_TABLE_TCC_INCLUDED
 #define OPEN_HASH_TABLE_TCC_INCLUDED
 
+#include "OpenHashTable.h"
+
 template<typename Key>
 OpenHashTable<Key>::OpenHashTable(long size, IHash<Key>* iHash) : HashTable<Key, List< Row<Key>* > >(size, iHash)
 {
-    // Création des lignes chaînées
+    // Crï¿½ation des lignes chaï¿½nï¿½es
     for (register long i = 0; i < this->getSize(); i++)
 
         this->getRow(i) = new List< Row<Key>* >();
@@ -20,10 +22,10 @@ OpenHashTable<Key>::~OpenHashTable()
 template<typename Key>
 void OpenHashTable<Key>::insert(const Row<Key>& row)
 {
-    // Tête de la liste
+    // Tï¿½te de la liste
     List< Row<Key>* >*& rowListHead = this->getRow(this->hash(row.getKey()));
 
-    // Copie (non-profonde) de la tête
+    // Copie (non-profonde) de la tï¿½te
     List< Row<Key>* > rowList = *rowListHead;
 
     // Recherche d'un doublon
@@ -40,7 +42,7 @@ void OpenHashTable<Key>::insert(const Row<Key>& row)
     Row<Key>* rowCopy;
     row.clone(rowCopy);
 
-    // Ajout de la ligne au début de la liste
+    // Ajout de la ligne au dï¿½but de la liste
     rowListHead->insert(rowCopy);
 }
 
@@ -49,13 +51,13 @@ Row<Key>* OpenHashTable<Key>::search(const Key& key)
 {
     List< Row<Key>* > rowList = *this->getRow(this->hash(key));
 
-    // Recherche tant que la liste n'est pas terminée
+    // Recherche tant que la liste n'est pas terminï¿½e
     while (!rowList.isEmpty())
     {
         // Ligne courante
         Row<Key>* currentRow = rowList.getData();
 
-        // Ligne trouvée ?
+        // Ligne trouvï¿½e ?
         if (*currentRow == key)
 
             return currentRow;
@@ -63,7 +65,7 @@ Row<Key>* OpenHashTable<Key>::search(const Key& key)
         rowList = rowList.next();
     }
 
-    // Pas trouvée...
+    // Pas trouvï¿½e...
     return NULL;
 }
 
@@ -82,7 +84,7 @@ void OpenHashTable<Key>::reset()
             rowList = rowList.next();
         }
 
-        // Réinitialisation de la liste
+        // Rï¿½initialisation de la liste
         this->getRow(i)->clear();
     }
 }

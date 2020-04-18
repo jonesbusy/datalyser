@@ -1,10 +1,12 @@
 #ifndef TABLE_TCC_INCLUDED
 #define TABLE_TCC_INCLUDED
 
+#include "Table.h"
+
 template <typename Key, typename Container>
 Table<Key, Container>::Table(long size) : size(size)
 {
-    // Test de cohérence de la taille
+    // Test de cohï¿½rence de la taille
     if (this->size < 0)
 
         throw SIZE_UNDER_ZERO;
@@ -30,15 +32,15 @@ Table<Key, Container>::~Table()
 template <typename Key, typename Container>
 void Table<Key, Container>::reset()
 {
-    // Désallocation et réinitialisation des lignes
+    // Dï¿½sallocation et rï¿½initialisation des lignes
     for (register long i = 0; i < this->size; i++)
 
         if (this->rows[i] != NULL)
         {
-            // Désallocation de la ligne
+            // Dï¿½sallocation de la ligne
             delete this->rows[i];
 
-            // Réinitialisation du pointeur (ligne vide)
+            // Rï¿½initialisation du pointeur (ligne vide)
             this->rows[i] = NULL;
         }
 }
@@ -69,13 +71,13 @@ void Table<Key, Container>::reverseRows(long index1, long index2)
 
         throw OUT_OF_RANGE;
 
-    // Pointeur sur la première ligne
+    // Pointeur sur la premiï¿½re ligne
     Container* rowTemp = this->rows[index1];
 
-    // Remplacement de la première par la seconde
+    // Remplacement de la premiï¿½re par la seconde
     this->rows[index1] = this->rows[index2];
 
-    // Placement de la première dans la seconde
+    // Placement de la premiï¿½re dans la seconde
     this->rows[index2] = rowTemp;
 }
 

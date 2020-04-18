@@ -1,6 +1,8 @@
 #ifndef DICHOTOMOUS_TABLE_TCC_INCLUDED
 #define DICHOTOMOUS_TABLE_TCC_INCLUDED
 
+#include "DichotomousTable.h"
+
 template <typename Key>
 DichotomousTable<Key>::DichotomousTable(long size) : Table<Key>::Table(size), offset(0), shorted(true)
 {
@@ -9,23 +11,23 @@ DichotomousTable<Key>::DichotomousTable(long size) : Table<Key>::Table(size), of
 template <typename Key>
 void DichotomousTable<Key>::insert(const Row<Key>& row)
 {
-    // Dépassement de la taille ?
+    // Dï¿½passement de la taille ?
     if (this->offset >= this->getSize())
 
         throw OVERFLOW;
 
-    // Ligne déjà existante ?
+    // Ligne dï¿½jï¿½ existante ?
     if (this->getRowPosition(row.getKey()) != -1)
 
         throw DUPLICATE_KEY;
 
-    // Allocation dynamique de la ligne et incrémentation du curseur
+    // Allocation dynamique de la ligne et incrï¿½mentation du curseur
     row.clone(this->getRow(this->offset++));
 
-    // Ajout de la ligne et incrémentation du curseur
+    // Ajout de la ligne et incrï¿½mentation du curseur
     //this->setRow(this->offset++, row);
 
-    // Table non-triée...
+    // Table non-triï¿½e...
     this->shorted = false;
 }
 
@@ -35,7 +37,7 @@ Row<Key>* DichotomousTable<Key>::search(const Key& key)
     // Positionnement de la ligne
     long index = this->getRowPosition(key);
 
-    // Pas trouvée...
+    // Pas trouvï¿½e...
     if (index == -1)
 
         return NULL;
@@ -50,10 +52,10 @@ void DichotomousTable<Key>::reset()
     // Appel du parent
     Table<Key>::reset();
 
-    // Réinitialisation du curseur
+    // Rï¿½initialisation du curseur
     this->offset = 0;
 
-    // Table vide donc triée...
+    // Table vide donc triï¿½e...
     this->shorted = true;
 }
 
@@ -65,17 +67,17 @@ long DichotomousTable<Key>::getRowPosition(const Key& key)
 
         return -1;
 
-    // Table non-triée ?
+    // Table non-triï¿½e ?
     if (!this->shorted)
     {
         // Tri complet de la table
         this->quickSort(0, this->offset - 1);
 
-        // Table triée...
+        // Table triï¿½e...
         this->shorted = true;
     }
 
-    // Indice du début
+    // Indice du dï¿½but
     long firstIndex = 0;
 
     // Indice de la fin
@@ -84,13 +86,13 @@ long DichotomousTable<Key>::getRowPosition(const Key& key)
     // Tant qu'il n'y a pas eu de croisement entre les deux indices
     while (firstIndex <= lastIndex)
     {
-        // Médiane des deux indices
+        // Mï¿½diane des deux indices
         long centerIndex = (firstIndex + lastIndex) / 2;
 
-        // Ligne de la médiane des deux indices
+        // Ligne de la mï¿½diane des deux indices
         Row<Key>* centerRow = this->getRow(centerIndex);
 
-        // Ligne trouvée
+        // Ligne trouvï¿½e
         if (*centerRow == key)
 
             // Envoie de l'indice
@@ -99,77 +101,77 @@ long DichotomousTable<Key>::getRowPosition(const Key& key)
         // Si la recherche est plus petite
         else if (*centerRow > key)
 
-            // Continuer dans la partie inférieure
+            // Continuer dans la partie infï¿½rieure
             lastIndex = centerIndex - 1;
 
         // Sinon (si la recherche est plus grande)
         else
 
-            // Continuer dans la partie supérieure
+            // Continuer dans la partie supï¿½rieure
             firstIndex = centerIndex + 1;
     }
 
-    // Pas trouvée...
+    // Pas trouvï¿½e...
     return -1;
 }
 
 template <typename Key>
 void DichotomousTable<Key>::quickSort(long firstIndex, long lastIndex)
 {
-    // Prend la valeur de l'élément central comme référence
+    // Prend la valeur de l'ï¿½lï¿½ment central comme rï¿½fï¿½rence
     Row<Key>* reference = this->getRow((firstIndex + lastIndex) / 2);
 
-    // Recherche un élément mal placé depuis la gauche
+    // Recherche un ï¿½lï¿½ment mal placï¿½ depuis la gauche
     long leftIndex = firstIndex;
 
-    // Recherche un élément mal placé depuis la droite
+    // Recherche un ï¿½lï¿½ment mal placï¿½ depuis la droite
     long rightIndex = lastIndex;
 
-    // S'il reste au moins 2 éléments
+    // S'il reste au moins 2 ï¿½lï¿½ments
     if (leftIndex < rightIndex)
     {
-        // Tant que les indices ne se sont pas croisés
+        // Tant que les indices ne se sont pas croisï¿½s
         while (leftIndex <= rightIndex)
         {
-            // Recherche élément mal placé à gauche
+            // Recherche ï¿½lï¿½ment mal placï¿½ ï¿½ gauche
             while (*reference > *this->getRow(leftIndex))
 
                 leftIndex++;
 
-            // Recherche élément mal placé à droite
+            // Recherche ï¿½lï¿½ment mal placï¿½ ï¿½ droite
             while (*this->getRow(rightIndex) > *reference)
 
                 rightIndex--;
 
-            // Si indices pas encore croisés
+            // Si indices pas encore croisï¿½s
             if (leftIndex < rightIndex)
             {
-                // Permute les 2 éléments mal placés
+                // Permute les 2 ï¿½lï¿½ments mal placï¿½s
                 this->reverseRows(leftIndex, rightIndex);
 
-                // Celui de gauche est maintenant bien placé
+                // Celui de gauche est maintenant bien placï¿½
                 leftIndex++;
 
-                // Celui de droite est maintenant bien placé
+                // Celui de droite est maintenant bien placï¿½
                 rightIndex--;
             }
-            // Si les deux indices sont égaux
+            // Si les deux indices sont ï¿½gaux
             else if (leftIndex == rightIndex)
             {
-                // Préparation de la sortie de la boucle :
+                // Prï¿½paration de la sortie de la boucle :
 
-                // Empêcher le débordement à droite de la table...
+                // Empï¿½cher le dï¿½bordement ï¿½ droite de la table...
                 if (leftIndex < lastIndex)
 
                     leftIndex++;
 
-                // Empêcher le débordement à gauche de la table...
+                // Empï¿½cher le dï¿½bordement ï¿½ gauche de la table...
                 if (rightIndex > firstIndex)
 
                     rightIndex--;
             }
 
-            // Si les indices se sont déjà croisés on ne fait rien
+            // Si les indices se sont dï¿½jï¿½ croisï¿½s on ne fait rien
         }
 
         // Trier le sous-tableau de bornes : premier et droite

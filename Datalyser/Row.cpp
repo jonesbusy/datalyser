@@ -1,6 +1,8 @@
 #ifndef ROW_TCC_INCLUDED
 #define ROW_TCC_INCLUDED
 
+#include "Row.h"
+
 template <typename Key>
 Row<Key>::Row(Key key) : key(key)
 {

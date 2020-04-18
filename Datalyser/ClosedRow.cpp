@@ -1,6 +1,8 @@
 #ifndef CLOSED_ROW_TCC_INCLUDED
 #define CLOSED_ROW_TCC_INCLUDED
 
+#include "ClosedRow.h"
+
 template <typename Key>
 ClosedRow<Key>::ClosedRow() : row(NULL), busy(false), size(0), hash(0)
 {

@@ -1,6 +1,8 @@
 #ifndef HASH_TABLE_TCC_INCLUDED
 #define HASH_TABLE_TCC_INCLUDED
 
+#include "HashTable.h"
+
 template <typename Key, typename Container>
 HashTable<Key, Container>::HashTable(long size, IHash<Key>* iHash) : Table<Key, Container>(size), iHash(iHash)
 {

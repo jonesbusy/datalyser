@@ -1,6 +1,8 @@
 #ifndef LIST_TCC_INCLUDED
 #define LIST_TCC_INCLUDED
 
+#include "List.h"
+
 template <typename Data>
 List<Data>::List() : head(NULL), copy(false)
 {
@@ -9,7 +11,7 @@ List<Data>::List() : head(NULL), copy(false)
 template <typename Data>
 List<Data>::List(const List<Data>& list)
 {
-    // Nouvelle tête
+    // Nouvelle tï¿½te
     this->head = list.head;
 
     // Copie non-profonde
@@ -28,7 +30,7 @@ List<Data>& List<Data>::operator=(const List<Data>& list)
     // Efface la liste
     this->clear();
 
-    // Nouvelle tête
+    // Nouvelle tï¿½te
     this->head = list.head;
 
     // Copie non-profonde
@@ -40,7 +42,7 @@ List<Data>& List<Data>::operator=(const List<Data>& list)
 template <typename Data>
 bool List<Data>::insert(const Data& data)
 {
-    // On ne peut pas insérer dans une copie
+    // On ne peut pas insï¿½rer dans une copie
     if (this->copy)
 
         return false;

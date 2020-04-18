@@ -11,3 +11,8 @@ project "Tables"
     kind "SharedLib"
     files "Tables/**.cpp"
     includedirs "Tables"
+    
+project "Datalyser"
+    kind "SharedLib"
+    files "Datalyser/**.cpp"
+    includedirs "Datalyser"
